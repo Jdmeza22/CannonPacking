@@ -16,4 +16,8 @@
     <Folder Include="Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CannonPacking.Domain\CannonPacking.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

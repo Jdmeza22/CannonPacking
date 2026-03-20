@@ -16,4 +16,9 @@
     <Folder Include="Middleware\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CannonPacking.Application\CannonPacking.Application.csproj" />
+    <ProjectReference Include="..\CannonPacking.Infrastructure\CannonPacking.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
