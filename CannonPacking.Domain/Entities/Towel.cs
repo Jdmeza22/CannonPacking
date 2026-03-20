@@ -12,6 +12,7 @@ public class Towel : BaseEntity
     public Guid? BoxId { get; set; }
     public Box? Box { get; set; }
 
+    private Towel() { }
     public Towel(string itemCode, string productCode)
     {
         Id = Guid.NewGuid();

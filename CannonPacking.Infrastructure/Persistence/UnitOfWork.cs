@@ -2,7 +2,7 @@
 
 namespace CannonPacking.Infrastructure.Persistence;
 
-internal class UnitOfWork
+public class UnitOfWork : IUnitOfWork
 {
     private readonly PackingDbContext _context;
     public ITowelRepository Towels { get; }

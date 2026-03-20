@@ -13,6 +13,7 @@ public class Box : BaseEntity
 
     public ICollection<Towel> Towels { get; set; } = new List<Towel>();
 
+    private Box() { }
     public Box(string boxCode, string productCode, int capacity)
     {
         Id = Guid.NewGuid();
