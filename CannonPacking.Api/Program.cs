@@ -3,6 +3,8 @@ using CannonPacking.Application.Services.Implementation;
 using CannonPacking.Application.Services.Interfaces;
 using CannonPacking.Infrastructure.Persistence;
 using CannonPacking.Infrastructure.Repositories;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,6 +30,10 @@ builder.Services.AddScoped<ITowelRepository, TowelRepository>();
 builder.Services.AddScoped<IBoxRepository, BoxRepository>();
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssemblyContaining<TowelValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<BoxValidator>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
